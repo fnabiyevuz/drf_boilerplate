@@ -42,13 +42,14 @@ DJANGO_APPS = [
 
 CUSTOM_APPS = [
     "apps.common",
-    "apps.users",
+    "apps.task_1",
+    "apps.task_2",
 ]
 
 THIRD_PARTY_APPS = [
     "captcha",
     "rest_framework",
-    # "django_filters",
+    "django_filters",
     "drf_yasg",  # swagger
     # "corsheaders",  # cors headers
     "rest_framework_simplejwt",  # JWT Authentication
@@ -157,7 +158,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Custom Auth User model
-AUTH_USER_MODEL = "users.User"
+AUTH_USER_MODEL = "task_1.User"
 
 #############################################################################################################
 # ##############################   Django Rest Framework Settings   #########################################

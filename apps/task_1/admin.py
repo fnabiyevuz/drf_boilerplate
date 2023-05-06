@@ -1,18 +1,18 @@
 from django.contrib import admin
 
-from apps.users.models import User
+from apps.task_1.models import User
 
 
 class UserAdmin(admin.ModelAdmin):
     search_fields = ("username", "first_name", "last_name")
-    list_display = ("id", "username", "first_name", "last_name")
+    list_display = ("id", "phone_number", "username", "first_name", "last_name", "is_deleted")
     list_display_links = (
         "id",
         "username",
     )
 
     fieldsets = (
-        ("Personal info", {"fields": ("id", "username", "first_name", "last_name")}),
+        ("Personal info", {"fields": ("id", "username", "first_name", "last_name", "phone_number", "is_deleted")}),
         ("Contact info", {"fields": ("email",)}),
         ("Permissions", {"fields": ("is_staff", "is_superuser", "groups", "user_permissions")}),
         (
